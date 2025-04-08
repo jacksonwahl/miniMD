@@ -12,9 +12,9 @@ SIMD ?= yes
 # System-specific settings
 
 CC =		mpicxx
-CCFLAGS =	-O3 -DMPICH_IGNORE_CXX_SEEK -fopenmp -DNOCHUNK
+CCFLAGS =	-O3 -DMPICH_IGNORE_CXX_SEEK -fopenmp -DNOCHUNK -pg
 LINK =		mpicxx 
-LINKFLAGS =	-O3 -fopenmp
+LINKFLAGS =	-O3 -fopenmp -pg
 USRLIB = 	
 SYSLIB =	
 SIZE =		size
