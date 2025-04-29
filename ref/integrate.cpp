@@ -107,6 +107,8 @@ void Integrate::run(Atom &atom, Force* force, Neighbor &neighbor,
         timer.stamp(TIME_COMM);
 
       } else {
+        #pragma omp master
+        printf("master in n step: %d", n)
         //these routines are not yet ported to OpenMP
         {
           if(check_safeexchange) {
